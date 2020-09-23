@@ -1,5 +1,6 @@
 class Project
   attr_reader :backers, :title
+  attr_accessor :backed_projects
   
   def initialize(title)
     @title = title
@@ -7,7 +8,6 @@ class Project
   end
   
   def add_backer(backed_projects)
-    newbackedproject = Project.new(title)
-    @backers << newbackedproject
+    @backers << backed_projects
   end
 end
